@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Quiz Game</title>
+
+    <!-- Tell mobile phones not to lie about their true width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+
+    <!--<link rel="stylesheet" type="text/css" href="styles/html5reset-1.6.1.css">-->
+
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Paprika" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles/myStyles.css">
+    <link rel="stylesheet" href="styles/animate.css">
+
+</head>
+
+<body>
+    <!-- SRC: https://codepen.io/dudleystorey/pen/knqyK -->
+    <video id="bgvid" playsinline muted loop preload="none">
+        <source src="videos/bgVideo.mp4" type="video/mp4" />
+        <source src="videos/bgVideo.webm" type="video/webm" />
+    </video>
+    <div id="mainC">
+        <header id="headerC">
+            <h1>Trivia Game</h1>
+        </header>
+        <div id="quizC">
+            <div id="quizCustom">
+                <div id="category">
+                    <h3>Select Category</h3>
+                    <select id="quizCategory" name="qCategory" class="form-control">
+                    <option value="">Any Category</option>
+                </select>
+                </div>
+                <div id="difficulty">
+                    <h3>Select Difficulty</h3>
+                    <select id="quizDifficulty" name="qDifficulty" class="form-control">
+                        <option value="">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div id="buttonC">
+                    <input class="button" type="button" id="quizGenerateButton" value="Generate Quiz" />
+                </div>
+            </div>
+
+            <div id="quizQuestions">
+                <div id="questionsC">
+                    <h3 id="question"></h3>
+                    <form id="quizOptions">
+                    </form>
+                    <h4 id="errorMessage" class="animated flash infinite">Select Answer First!</h4>
+                    <input class="button" type="button" id="submitAnswerButton" value="Submit Answer" />
+                </div>
+            </div>
+            
+            <div id="resultsC">
+                <h2 id="counter" class=""></h2>
+                <h3 id="resultsMessage" class=""></h3>
+                <input class="button" type="button" id="tryAgainButton" value="Try Again?" />
+                
+                <ul id="correctAnswers">
+                    <h3><u>Correct Answers</u></h3>
+                </ul>
+                
+            </div>
+
+
+            <footer id="footerC">
+                <h5>Made By Thibagar Thiyanamoorthy</h5>
+            </footer>
+        </div>
+    </div>
+    <script src="scripts/myScript.js"></script>
+    
+</body>
+
+</html>
